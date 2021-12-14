@@ -22,7 +22,31 @@ class Tym < Formula
     prefix.install Dir["node_modules"]
     prefix.install Dir["extensions"]
     prefix.install Dir["out"]
+    prefix.install 
   end
+
+  
+
+  def plist; <<~EOS
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+      <key>Label</key>
+      <string>so.tym.cli.service</string>
+      <key>ProgramArguments</key>
+      <array>
+        <string>tym</string>
+        <string>start</string>
+      </array>
+      <key>KeepAlive</key>
+      <true/>
+    </dict>
+    </plist>
+    
+    EOS
+  end
+
 
   test do
     # `test do` will create, run in and delete a temporary directory.
