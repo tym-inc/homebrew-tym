@@ -37,7 +37,6 @@ class Tym < Formula
       <key>ProgramArguments</key>
       <array>
         <string>tym</string>
-        <string>start</string>
       </array>
       <key>KeepAlive</key>
       <true/>
