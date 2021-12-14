@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class HomebrewTym < Formula
+class Tym < Formula
   desc "Instant Code Collaboration"
   homepage "https://tym.so"
   url "https://github.com/tym-inc/homebrew-tym/archive/refs/tags/0.0.2.tar.gz"
