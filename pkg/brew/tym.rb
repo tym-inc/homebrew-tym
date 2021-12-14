@@ -4,8 +4,8 @@
 class Tym < Formula
   desc "Instant Code Collaboration"
   homepage "https://tym.so"
-  url "https://github.com/tym-inc/homebrew-tym/releases/download/0.0.2/tym.tar.gz"
-  sha256 "db238757c2a2cb2dd82390f565c8f3168c8839bef911b8b11c3b16c305a1ed59"
+  url "https://github.com/tym-inc/homebrew-tym/releases/download/brew-cli-0.1/tym_cli.tar.gz"
+  sha256 "e9f85a44fab40f8c2925a387f8aec89a1fec09b6e84f1119ed9623a6a5ebc7e5"
   license ""
 
   # depends_on "cmake" => :build
@@ -24,7 +24,6 @@ class Tym < Formula
     bin.install Dir["node_modules"]
     bin.install Dir["extensions"]
     bin.install Dir["out"]
-
   end
 
   test do
