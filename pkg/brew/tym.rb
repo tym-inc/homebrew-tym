@@ -15,7 +15,7 @@ class Tym < Formula
     # Remove unrecognized options if warned by configure
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-    bin.install "cli.sh"
+    bin.install "tym"
     bin.install "install.sh"
     bin.install "package.json"
     bin.install "tym_install.sh"
