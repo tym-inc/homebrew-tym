@@ -3,12 +3,12 @@ class TymBin < Formula
   desc "Cli for Tym Editor"
   homepage "https://github.com/tym-inc/homebrew-tym"
 
-  if OS.mac?
+  if OS.linux?
     url ""
     sha256 ""
-  elsif OS.linux?
-    url "https://github.com/tym-inc/homebrew-tym/releases/download/0.0.1/tym-0.0.1-x86_64-unknown-linux-musl.tar.gz"
-    sha256 "a3f2a3767ee63d3f259d3e379670deb0cc6e727ecc8ac1e4f8241b355b444d6f"
+  elsif OS.mac?
+    url "https://github.com/tym-inc/homebrew-tym/releases/download/0.0.2/tym.tar.gz"
+    sha256 "db238757c2a2cb2dd82390f565c8f3168c8839bef911b8b11c3b16c305a1ed59"
   end
 
   def install
