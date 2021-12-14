@@ -16,9 +16,7 @@ class Tym < Formula
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     bin.install "tym"
-    bin.install "install.sh"
     bin.install "package.json"
-    bin.install "tym_install.sh"
     bin.install "node" 
     bin.install "product.json"
     bin.install Dir["node_modules"]
