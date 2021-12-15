@@ -26,7 +26,7 @@ class Tym < Formula
   end
 
   service do
-    run opt_bin/"code-server"
+    run opt_bin/"tym"
     keep_alive true
     error_log_path var/"log/code-server.log"
     log_path var/"log/code-server.log"

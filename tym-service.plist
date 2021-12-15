@@ -16,5 +16,7 @@
 	<string>/opt/homebrew/var/log/tym.log</string>
 	<key>StandardOutPath</key>
 	<string>/opt/homebrew/var/log/tym.log</string>
+	<key>WorkingDirectory</key>
+	<string>/Users/behzad</string>
 </dict>
 </plist>
