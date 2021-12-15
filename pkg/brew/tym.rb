@@ -1,6 +1,3 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Tym < Formula
   desc "Instant Code Collaboration"
   homepage "https://tym.so"
@@ -25,52 +22,35 @@ class Tym < Formula
     prefix.install 
   end
 
-  service do
-    run opt_bin/"tym"
-    keep_alive true
-    error_log_path var/"log/code-server.log"
-    log_path var/"log/code-server.log"
-    working_dir ENV["HOME"]
-  end
 
-  # def plist; <<~EOS
-  #   <?xml version="1.0" encoding="UTF-8"?>
-  #   <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-  #   <plist version="1.0">
-  #   <dict>
-  #     <key>KeepAlive</key>
-  #     <true/>
-  #     <key>Label</key>
-  #     <string>homebrew.mxcl.tym</string>
-  #     <key>ProgramArguments</key>
-  #     <array>
-  #       <string>/opt/homebrew/bin/tym</string>
-  #     </array>
-  #     <key>RunAtLoad</key>
-  #     <true/>
-  #     <key>StandardErrorPath</key>
-  #     <string>/opt/homebrew/var/log/tym.log</string>
-  #     <key>StandardOutPath</key>
-  #     <string>/opt/homebrew/var/log/tym.log</string>
-  #     <key>WorkingDirectory</key>
-	#     <string>/Users/behzad</string>
-  #   </dict>
-  #   </plist>
-  
-  #   EOS
-  # end
+  def plist; <<~EOS
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+      <key>KeepAlive</key>
+      <true/>
+      <key>Label</key>
+      <string>homebrew.mxcl.tym</string>
+      <key>ProgramArguments</key>
+      <array>
+        <string>/opt/homebrew/bin/tym</string>
+      </array>
+      <key>RunAtLoad</key>
+      <true/>
+      <key>StandardErrorPath</key>
+      <string>#{var}/log/tym.log</string>
+      <key>StandardOutPath</key>
+      <string>#{var}/log/tym.log</string>
+      <key>WorkingDirectory</key>
+	    <string>#{ENV["HOME"]}</string>
+    </dict>
+    </plist>
+    EOS
+  end
 
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test homebrew-tym`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
     system "false"
   end
 end
