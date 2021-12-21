@@ -2,7 +2,7 @@ class Tym < Formula
   desc "Instant Code Collaboration"
   homepage "https://tym.so"
   url "https://github.com/tym-inc/homebrew-tym/releases/download/brew-cli-0.4/tym-cli.tar.gz"
-  sha256 "c3340e22d571ef688eaa4be94690297e47ed44f3cee9ad360909ea74605e3886"
+  sha256 "9289a0631eb68da0b5f83f71241c488539fd69165b51a2a3093a0676006536d1"
   license ""
 
   # depends_on "cmake" => :build
