@@ -7,11 +7,6 @@ class Tym < Formula
 
   # depends_on "cmake" => :build
 
-  depends_on "yarn" => :build
-  depends_on "node@14"
-  
-
-
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
