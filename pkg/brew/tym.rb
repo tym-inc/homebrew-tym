@@ -1,26 +1,36 @@
 class Tym < Formula
   desc "Instant Code Collaboration"
   homepage "https://tym.so"
-  url "https://github.com/tym-inc/homebrew-tym/releases/download/brew-cli-0.2/tym_cli_0.2.tar.gz"
-  sha256 "481681163edf90aafbbed3c45668a328eca371d8cec4394be569e9c19c792d1a"
+  url "https://github.com/tym-inc/homebrew-tym/releases/download/brew-cli-0.4/tym-cli.tar.gz"
+  sha256 "c3340e22d571ef688eaa4be94690297e47ed44f3cee9ad360909ea74605e3886"
   license ""
 
   # depends_on "cmake" => :build
+
+  depends_on "yarn" => :build
+  depends_on "node@14"
+  
+
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-    bin.install "tym"
-    prefix.install "package.json"
-    prefix.install "node" 
-    prefix.install "product.json"
-    prefix.install Dir["node_modules"]
-    prefix.install Dir["extensions"]
-    prefix.install Dir["out"]
-    prefix.install 
+    
+    # system "sh ./augment_brew.sh"
+    prefix.install "augment_brew.sh"
+    
+    system "sh #{prefix}/augment_brew.sh"
+    # prefix.install "package.json"
+    # prefix.install "product.json"
+    # prefix.install Dir["extensions"]
+    # prefix.install Dir["out"]
+    # prefix.install Dir["node_modules"]
+    # prefix.install 
   end
+
+
 
 
   def plist; <<~EOS
