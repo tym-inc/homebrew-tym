@@ -19,7 +19,6 @@ class Tym < Formula
     prefix.install Dir["node_modules"]
     prefix.install Dir["extensions"]
     prefix.install Dir["out"]
-
   end
 
 
