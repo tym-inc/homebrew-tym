@@ -13,12 +13,12 @@ class Tym < Formula
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     bin.install "tym"
-    prefix.install "package.json"
-    prefix.install "node" 
-    prefix.install "product.json"
-    prefix.install Dir["node_modules"]
-    prefix.install Dir["extensions"]
-    prefix.install Dir["out"]
+    libexec.install "package.json"
+    libexec.install "node" 
+    libexec.install "product.json"
+    libexec.install Dir["node_modules"]
+    libexec.install Dir["extensions"]
+    libexec.install Dir["out"]
 
   end
 
@@ -36,7 +36,7 @@ class Tym < Formula
       <string>homebrew.mxcl.tym</string>
       <key>ProgramArguments</key>
       <array>
-        <string>/opt/homebrew/bin/tym</string>
+        <string>tym</string>
       </array>
       <key>RunAtLoad</key>
       <true/>
